@@ -14,5 +14,17 @@ function login() {
         id: id.value,
         psword: pwd.value,
     };
-    console.log(req);
+    //console.log(req);
+    //console.log(JSON.stringify(req)); //무ㄴ자열
+    
+
+    fetch("/login",{
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(req),
+    });
+
+    
 }
