@@ -15,7 +15,7 @@ function login() {
         psword: pwd.value,
     };
     //console.log(req);
-    //console.log(JSON.stringify(req)); //무ㄴ자열
+    //console.log(JSON.stringify(req)); //문자열
     
 
     fetch("/login",{
@@ -24,7 +24,10 @@ function login() {
             "Content-Type" : "application/json"
         },
         body: JSON.stringify(req),
-    });
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+
 
     
 }
