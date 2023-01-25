@@ -1,7 +1,7 @@
 "use strict"
 
 const id = document.querySelector("#id"),
-    pwd = document.querySelector("#pwd"),
+psword = document.querySelector("#psword"),
     loginbtn = document.querySelector("button");
 
 //console.log(id);
@@ -12,7 +12,7 @@ function login() {
     //console.log(id.value);
     const req = {
         id: id.value,
-        psword: pwd.value,
+        psword: psword.value,
     };
     //console.log(req);
     //console.log(JSON.stringify(req)); //문자열
